@@ -1,0 +1,25 @@
+<h1 class="caption">{dede:field name='typename' /} <a class="closebutton" href="#!/"></a></h1>
+<ul class="portfolioitems portfolio2columns">
+  {dede:list pagesize='4' titlelen='35' infolen='200'}
+  <li>
+    <div class="image_frame"> <a href="[field:picname/]" class="nolink"> <img src="[field:picname/]" width="290" height="186" /> </a>
+      <div class="hoverWrapperBg"></div>
+      <div class="hoverWrapper">
+        <h3>[field:title/]</h3>
+        <div class="enter-text">[field:infos/]</div>
+        <a class="link" href="#![field:arcurl/]"></a> <a class="modal nolink" href="javascript:void(0);"></a> </div>
+    </div>
+  </li>
+  {/dede:list}
+</ul>
+<!-- /pages -->
+<div class="divider" style="height:13px;"></div>
+<div class="dede_pages">
+  <ul class="pagelist">
+    {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+  </ul>
+</div>
+<div class="blogTop">
+  <hr/>
+  <a class="nolink" href="javascript:void(0);">TOP</a></div>
+<div class="clearfix"></div>

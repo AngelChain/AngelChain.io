@@ -1,0 +1,116 @@
+﻿<h1 class="caption">{dede:field name='typename' /} <a class="closebutton" href="#!/"></a></h1>
+<div class="divider"></div>
+<img src="/skin/images/contact.jpg" width="600" height="250" />
+<div class="c1of2">
+  <h4>关于我们</h4>
+  <div class="divider" style="height:13px"></div>
+  织梦58（www.dede58.com）专业提供网站模板，网页模板，网站源码，网站素材，网页特效等网页设计素材免费下载。我们致力于打造一个优秀的建站资源共享学习平台。 <br />
+  织梦58离不开您的参与，如果您：<br />
+  1.要出售自己的得意模板、插件、教程？欢迎您来这里交易，找到需要她、欣赏她的人。<br />
+  2.苦苦寻觅某套模板、迫切希望得到设计帮助？这里或许能很快解决您的问题。<br />
+  4.想结交更多热爱模板、插件的朋友？那就快来展示您的作品，寻找志趣相投的朋友吧。<br />
+  织梦58已经上路，我们将为此不懈努力，期待得到您的支持！ </div>
+<div class="c1of2_end">
+  <div id="mapContact" style="width:100%; height:250px">
+    <iframe src="/ditu.html" id="ifrm" name="ifrm" width="100%" height="100%" frameborder="0" scrolling="no" onload="document.all('ifrm').style.height=ifrm.document.body.scrollHeight+30;"></iframe>
+  </div>
+</div>
+<div class="c1of2">
+  <h4>在线留言</h4>
+  <hr class="seperator" style="margin-top:17px"/>
+  <div class="divider" style="height:10px"></div>
+  <!-- BEGIN: Contact Form -->
+  <div class="contactForm dform">
+    <form method="post" enctype="multipart/form-data" action="/plus/diy.php">
+      <input type="hidden" value="post" name="action">
+      <input type="hidden" value="1" name="diyid">
+      <input type="hidden" value="2" name="do">
+      <p>
+        <label for="name">姓名</label>
+        <input type="hidden" id="name_title" name="title[]" value="name" />
+      <div class="dFormInput">
+        <input class="required" id="name" type="text" name="name" />
+      </div>
+      </p>
+      <p>
+        <label for="email">邮箱</label>
+        <input type="hidden" id="email_title" name="title[]" value="email" />
+      <div class="dFormInput">
+        <input class="required email" id="email" type="text" name="email" />
+      </div>
+      </p>
+      <p>
+        <label for="description">内容</label>
+        <input type="hidden" id="description_title" name="title[]" value="Description" />
+      <div class="dFormInput">
+        <textarea class="required" id="description" name="con" ></textarea>
+      </div>
+      </p>
+      <p style="padding:0px;">
+        <label for="submit">&nbsp;</label>
+      <div class="form_input"> <a class="nolink submitButton" href="javascript:void(0);" onclick="javascript:$('.contactForm form').submit();">SUBMIT</a> </div>
+      </p>
+      <input type="hidden" value="name,text;email,text;con,multitext" name="dede_fields">
+      <input type="hidden" value="a4d2b992a73f47c399a1c64782a48f27" name="dede_fieldshash">
+    </form>
+  </div>
+  <!-- END: Contact Form --> 
+  
+  <script type="text/javascript">
+	$('#contentBox').ready(function(){
+		$(".contactForm form").validate({
+		  errorPlacement: function(error, element) {
+			 error.appendTo(element.parent("div").next() );
+		   }
+		 });
+		$(".contactForm form").submit(function(){
+			if($(".contactForm form").valid())
+			{
+				var formdata = $(".contactForm form").serialize();
+				$(".contactForm form").slideUp();
+				$(".contactForm").append("<div class=\"form_message\">提交成功...</div>").find("div.form_message").slideDown("slow");
+				$.post("/plus/diy.php", formdata, function(data){
+				console.log('contact return; ',data);
+					data = $.parseJSON(data); 
+					if(data.status=="OK")
+					{
+						$(".contactForm .form_message").html("Your message has been send successfuly.");
+					}
+					else
+					{
+						alert(data.ERR);
+						$(".contactForm form").slideDown();
+						$(".contactForm .form_message").remove();
+					}
+				});
+			}else
+				alert("Please fill all required fields.");
+			return false;
+		});
+	});
+	</script> 
+</div>
+<div class="c1of2_end">
+  <h4>联系方式</h4>
+  <hr class="seperator" style="margin-top:17px"/>
+  <div class="divider" style="height:3px"></div>
+  
+  <!-- BEGIN: Content Informations -->
+  <div class="list_two">
+    <div class="item_two_one">地址</div>
+    <div class="item_two_two">{dede:global.moke_adress/}</div>
+    <div class="item_two_one">电话</div>
+    <div class="item_two_two">{dede:global.moke_phone/}</div>
+    <div class="item_two_one">传真</div>
+    <div class="item_two_two">{dede:global.moke_chuangzheng/}</div>
+    <div class="item_two_one">网址</div>
+    <div class="item_two_two"><a class="nolink" href="{dede:global.cfg_basehost/}" target="_blank">{dede:cfg_basehost/}</a></div>
+    <div class="item_two_one">邮箱</div>
+    <div class="item_two_two"><a class="nolink" href="mailto:{dede:global.moke_email/}" >{dede:global.moke_email/}</a></div>
+  </div>
+  <!-- END: Content Informations --> 
+</div>
+<div class="blogTop">
+  <hr/>
+  <a class="nolink" href="javascript:void(0);">TOP</a></div>
+<div class="clearfix"></div>
