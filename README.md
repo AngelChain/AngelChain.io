@@ -2,7 +2,7 @@
 #AngelChain.io
 Angellchain.io is the official website of angel information, which is called Angel Chain. It formally develops the source code of the website from April 2019. It ends in May. The purpose of the official website is to shape the image of Angel Chain, transfer team information, program development progress and so on. It aims to face the supervision of the market and investors openly and fairly, and also to enable Angel Chain to win its place in the field of innovation.
 
-##What's AngelChainï¼Ÿ
+##What's AngelChain£¿
 
 Angel Chain is an application technology based on providing cloud data computing services, large data storage services, data center analysis and intelligent AI judgment for docking terminals.
 
