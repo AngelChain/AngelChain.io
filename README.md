@@ -21,5 +21,5 @@ Through the development team of China, Angel cloud computing Dispaly is built fo
 There is no need to worry about the security and integrity of data sharing in block chain networks. Angelchain provides an anonymous database and emergency database technology to create a secure and universal data structure.  
 ## Contributors  
 Establishing a community of users and contributors so that the code does not have to rely on specific thinking cycles helps more people love the block chain, get more inspiration from it, and also live with generous reward  
-##Contact us  
+## Contact us  
 service@angelchain.io  
